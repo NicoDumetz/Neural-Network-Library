@@ -1,28 +1,28 @@
 # G-CNA Neural Network Library
 
-Ce dépôt contient la documentation et les sources de la bibliothèque G-CNA, une collection d'opérateurs, couches et optimisateurs conçus pour expérimenter des réseaux de neurones faits maison. L'objectif est de proposer des blocs de construction simples, compréhensibles et faciles à étendre pour tester des idées d'apprentissage profond sans dépendre d'une stack trop lourde.
+This repository hosts the documentation and sources for the G-CNA library, a collection of operators, layers, and optimizers meant to explore neural network ideas from scratch. The goal is to offer simple, understandable building blocks that are easy to extend without relying on a heavy external stack.
 
-## Structure du dépôt
+## Repository structure
 
-- `docs/` : pages de référence organisées par sujet (modules, tenseurs, couches, etc.). C'est ici que vous pouvez lire les explications détaillées.
-- `Module/`, `Optimizer/`, `Tensor/`, `Configuration/`, `Helper/` : implémentations de base réparties par responsabilité. Chaque dossier contient le code qui accompagne la documentation correspondante.
-- `README.md` : ce fichier d'embarquement rapide.
+- `docs/`: reference pages grouped by topic (modules, tensors, layers, etc.). Browse these files for detailed explanations.
+- `Module/`, `Optimizer/`, `Tensor/`, `Configuration/`, `Helper/`: implementation code organized by responsibility, matching the related documentation.
+- `README.md`: this onboarding file.
 
 ## Documentation
 
-- [Guide général](docs/DOCUMENTATION.md) : aperçu global des concepts, conventions et flux de travail de la bibliothèque.
-- [Modules](docs/modules.md) : classe de base `Module`, structure `Sequential` et étapes de calcul vers la propagation avant.
-- [Tenseurs et paramètres](docs/tensor.md) : `Tensor`, `Parameter` et rappel rapide de l'autodiff.
-- [Couches](docs/layers.md) : couches `Linear`, `Conv2d`, `MaxPool2d`, `BatchNorm2d`, `Flatten` et leurs usages.
-- [Activations](docs/activations.md) : fonctions d'activation (`ReLU`, `LeakyReLU`, `Sigmoid`, `Tanh`, `Softmax`).
-- [Pertes](docs/losses.md) : implémentations de `MSE`, `L1`, `CrossEntropy`, `BCE`.
-- [Optimiseurs](docs/optimizers.md) : `SGD`, `Adam` et planificateur `StepLr`.
-- [Opérations de rétropropagation](docs/backward_ops.md) : topo des opérations générées pendant la rétroprop.
-- [Helpers](docs/helper.md) : initialiseurs, techniques de pruning et quantification.
-- [Analyse](docs/analyzer.md) : outils d'inspection et de débogage de flux.
+- [General guide](docs/DOCUMENTATION.md): overview of the library concepts, conventions, and workflows.
+- [Modules](docs/modules.md): the `Module` base class, `Sequential`, and the forward-passing steps.
+- [Tensors and parameters](docs/tensor.md): `Tensor`, `Parameter`, and a quick autodiff refresher.
+- [Layers](docs/layers.md): `Linear`, `Conv2d`, `MaxPool2d`, `BatchNorm2d`, `Flatten`, and usage notes.
+- [Activations](docs/activations.md): activation functions (`ReLU`, `LeakyReLU`, `Sigmoid`, `Tanh`, `Softmax`).
+- [Losses](docs/losses.md): implementations of `MSE`, `L1`, `CrossEntropy`, `BCE`.
+- [Optimizers](docs/optimizers.md): `SGD`, `Adam`, and the `StepLr` scheduler.
+- [Backward operations](docs/backward_ops.md): overview of operations created during backprop.
+- [Helpers](docs/helper.md): initializers, pruning techniques, and quantization helpers.
+- [Analysis](docs/analyzer.md): tools for inspecting and debugging execution flows.
 
-## Premiers pas
+## Getting started
 
-1. Explorez les fichiers de `docs/` pour comprendre les primitives disponibles.
-2. Étudiez les dossiers `Module/`, `Tensor/`, etc. pour voir les implémentations réelles.
-3. Ajoutez vos propres modules ou extensions dans les dossiers existants et créez ou mettez à jour une page dans `docs/` si nécessaire.
+1. Read the files in `docs/` to understand the available primitives.
+2. Dive into the `Module/`, `Tensor/`, etc. directories to see the actual implementations.
+3. Add your own modules or extensions within these folders and update the relevant `docs/` page when needed.
